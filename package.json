@@ -1,0 +1,23 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Create my own blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malaba6/Blockchain.git"
+  },
+  "keywords": [
+    "blockchain",
+    "malaba"
+  ],
+  "author": "malaba6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malaba6/Blockchain/issues"
+  },
+  "homepage": "https://github.com/Malaba6/Blockchain#readme"
+}
