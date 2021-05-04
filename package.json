@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Malaba6/Blockchain/issues"
   },
-  "homepage": "https://github.com/Malaba6/Blockchain#readme"
+  "homepage": "https://github.com/Malaba6/Blockchain#readme",
+  "dependencies": {
+    "sha256": "^0.2.0"
+  }
 }
