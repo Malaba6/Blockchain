@@ -1,26 +1,29 @@
 {
   "name": "blockchain",
-  "version": "1.0.0",
-  "description": "Create my own blockchain",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node ./bin/www",
+    "dev": "nodemon --watch src -e js babel-node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Malaba6/Blockchain.git"
-  },
-  "keywords": [
-    "blockchain",
-    "malaba"
-  ],
-  "author": "malaba6",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Malaba6/Blockchain/issues"
-  },
-  "homepage": "https://github.com/Malaba6/Blockchain#readme",
   "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "remove": "^0.1.5",
     "sha256": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/node": "^7.13.13",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/register": "^7.13.16",
+    "nodemon": "^2.0.7"
   }
 }
