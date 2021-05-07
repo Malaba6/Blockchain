@@ -1,2 +1,14 @@
-GET http://localhost:3000/blockchain HTTP/1.1
+# GET http://localhost:3000/blockchain HTTP/1.1
+# Content-Type: application/json
+
+# POST http://localhost:3000/transaction HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "amount": "1000",
+#     "sender": "Avi2HJUSJDHB98JK",
+#     "recipient": "Eric7UJHYmoi9nbH"
+# }
+
+GET http://localhost:3000/mine HTTP/1.1
 Content-Type: application/json
