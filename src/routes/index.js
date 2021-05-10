@@ -22,7 +22,7 @@ router.get('/blockchain', (req, res, next) => {
 router.get('/mine', (req, res, next) => {
   const nodeAddress = v4().split('-')?.join(' ');
   chain.createNewTransaction(12.5, '00', nodeAddress);
-  
+
   const lastBlock = chain.getLastBock();
   const previousBlockHash = chain.getLastBock().hash;
 
@@ -46,6 +46,38 @@ router.post('/transaction', (req, res, next) => {
     status: 'Success',
     message: `Transaction will be added in block ${blockIndex}`
   })
+});
+
+router.post('/broadcast-and-register-node', (req, res) => {
+  const newNodeUrl =req.body.newNodeUrl;
+  if (chain.networkNodes.indexOf(newNodeUrl) === -1)
+    chain.networkNodes.push(newNodeUrl);
+  const options = {
+    uri: newNodeUrl + '/register-node',
+    method: 'POST',
+    body: { newNodeUrl },
+    json: true
+  }
+  // res.status(201).send({
+  //   status: 'Success',
+  //   message: `Transaction will be added in block ${blockIndex}`
+  // })
+});
+
+router.post('/register-node', (req, res) => {
+  // const newNodeUrl =req.body.newNodeUrl;
+  // res.status(201).send({
+  //   status: 'Success',
+  //   message: `Transaction will be added in block ${blockIndex}`
+  // })
+});
+
+router.post('/register-nde-bulk', (req, res) => {
+  // const newNodeUrl =req.body.newNodeUrl;
+  // res.status(201).send({
+  //   status: 'Success',
+  //   message: `Transaction will be added in block ${blockIndex}`
+  // })
 });
 
 

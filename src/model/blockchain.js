@@ -3,6 +3,8 @@ class Blockchain {
   constructor() {
     this.chain = [];
     this.pendingTransactions = [];
+    this.currentNodeUrl = currentNodeUrl;
+    this.networkNodes = [];
     this.createNewBlock(100, 'ARNDOM1', 'RANDOM2');
   }
   createNewBlock(nonce, previousBlockHash, hash) {
